@@ -36,7 +36,7 @@ app.get("/", (req,res) =>{
     })
 })
 
-app.get('/Watch/:name/:epNum', urlencodedParser, (req,res) =>{
+app.get('/view/:Id', urlencodedParser, (req,res) =>{
     var animeName = req.name;
     console.log(animeName)
 })
