@@ -30,8 +30,8 @@ conn.connect((err) =>{
 
 app.get("/", (req,res) =>{
 
-    conn.query("select * from myAnimeShows", (err, rows) =>{
-        var data;
+    conn.query("select * from animeList", (err, rows) =>{
+
         res.render('Home', {model:rows}) 
     })
 })
