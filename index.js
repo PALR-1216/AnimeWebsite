@@ -32,12 +32,13 @@ app.get("/", (req,res) =>{
 
     conn.query("select * from myAnimeShows", (err, rows) =>{
         var data;
-        res.render('Home', {model:rows})
-      
-        
-       
+        res.render('Home', {model:rows}) 
     })
-    
+})
+
+app.get('/Watch/:name/:epNum', urlencodedParser, (req,res) =>{
+    var animeName = req.name;
+    console.log(animeName)
 })
 
 
