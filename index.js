@@ -36,9 +36,19 @@ app.get("/", (req,res) =>{
     })
 })
 
-app.get('/view/:Id', urlencodedParser, (req,res) =>{
-    var animeName = req.name;
-    console.log(animeName)
+app.get('/list/:id', urlencodedParser, (req,res) =>{
+//   var AnimeName = req.params.ANimeName;
+  conn.query("select * from myAnimeShows where animeId = " + req.params.id, (err,rows) =>{
+      if(err) throw err;
+      console.log(rows)
+      
+      res.render("ListShows", {model:rows})
+  })
+  
+})
+
+app.get('list//watch/:animeName/:AnimeVideoId', (req,res) =>{
+    res.send(req.params.animeName + req.params.AnimeVideoId)
 })
 
 
