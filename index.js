@@ -47,8 +47,10 @@ app.get('/list/:id', urlencodedParser, (req,res) =>{
   
 })
 
-app.get('list//watch/:animeName/:AnimeVideoId', (req,res) =>{
-    res.send(req.params.animeName + req.params.AnimeVideoId)
+app.get('/watch/:AnimeVideoId', (req,res) =>{
+    res.render("VideoPlayer")
+  
+
 })
 
 
