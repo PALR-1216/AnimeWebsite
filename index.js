@@ -47,8 +47,16 @@ app.get('/list/:id', urlencodedParser, (req,res) =>{
   
 })
 
-app.get('/watch/:AnimeVideoId', (req,res) =>{
-    res.render("VideoPlayer")
+app.get('/watch/:animeVideoId', (req,res) =>{
+    
+    conn.query(`select animeVideoId from myAnimeShows where animeVideoId = '${req.params.animeVideoId}'`  , (err,rows) =>{
+        if(err) throw err;
+        console.log(rows)
+        res.render('VideoPlayer', {model:{
+            videoId: req.params.animeVideoId
+        }})
+        
+    })
   
 
 })
