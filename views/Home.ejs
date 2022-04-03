@@ -15,7 +15,14 @@
   
     <%for(var i =0 ; i < model.length; i++){%>
 
-        <a href="/list/<%=model[i].ID%>"><%=model[i].animeName%></a>
+        <div class="card m-2" style="width: 300px;">
+            <img src="<%=model[i].ImageCoverUrl%>" alt="a snow-capped mountain range"/>
+            <div class="card-body">
+              <h2 class="card-title"><%=model[i].animeName%></h2>
+              
+              <a href="/list/<%=model[i].ID%>" class="btn btn-secondary">Watch <%=model[i].animeName%></a>
+            </div>
+          </div>
         
 
     <%}%>
