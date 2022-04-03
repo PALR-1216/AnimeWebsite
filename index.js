@@ -70,3 +70,5 @@ const PORT = process.env.PORT || 3000
 app.listen(PORT ,() =>{
     console.log("server running in port 3000")
 })
+
+//StreamTapeAPI List files in Juju Folder//https://api.streamtape.com/file/listfolder?login=68889ca36ba038773ad4&key=PDz3B0DDvvt0VZ8&folder=PRg2z04aROs
