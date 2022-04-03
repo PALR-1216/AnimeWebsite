@@ -57,8 +57,10 @@ app.get('/watch/:animeVideoId', (req,res) =>{
         }})
         
     })
-  
+})
 
+app.get('/info', (req,res) =>{
+    res.send("a Anime WebSite made from pedro Lorenzo")
 })
 
 
